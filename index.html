@@ -3,154 +3,82 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
+    <title>Responsive Portfolio Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <!----Font awesome cdn  font icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 
 <body>
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    
+                    <div class="logo-text">Erick Junior</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Portafolio</a></li>
+                        <li><a href="#">Resumen</a></li>
+                        <li><a href="#">Experiencia</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                <div class="hero-pic">
+                    <img src="images/portada.jpg" alt="profile pic">
+                </div>
+                <div class="hero-text">
+                    <h5>Hola, yo soy <span class="input"></span></h5> <!--programing-->
+                    <h1>Erick Junior</h1>
+                    <p> Me apasiona aprender y compartir conocimientos. He trabajado como desarrollador en proyectos de landing pages y sistemas de ventas. Participé en el programa de Futuros Empresarios de la PAD, donde aprendí sobre marketing digital, liderazgo y gestión comercial. Siempre busco nuevas oportunidades para aplicar mis habilidades. Recuerda: "Siempre da lo mejor de ti". ¡Contáctame para colaborar o intercambiar ideas!
+                    </p>
 
-    <!-- PORTADA -->
-    <div class="container">
-        <div class="one-card">
-            <div class="imagen-port">
-                <div class="img-box"></div>
-            </div>
-            <div class="content-port">
-                
-            </div>
-        </div>
-    </div>
+                    <div class="btn-group">
+                        <a href="/Erick Flores CV.pdf" class="btn active">Ver CV</a>
+                        <a href="https://wa.me/51980439371" class="btn">Contacto</a>
+                    </div>
 
-    <!-- COMPETENCIAS -->
-    <div class="container-two">
-        <div class="two-card">
-            <div class="title-two">
-                <h1>MIS COMPETENCIAS TECNICAS</h1>
-            </div>
-            <div class="content-two">
-                <div class="content-two-chek"><i class="fa-solid fa-check"></i><span>Experiencia en Google Workspace y automatización con Apps Script.</span></div>
-                <div class="content-two-chek"><i class="fa-solid fa-check"></i><span>Diseño de prototipos utilizando Figma.</span></div>
-                <div class="content-two-chek"><i class="fa-solid fa-check"></i><span>Creación y diseño de bases de datos.</span></div>
-                <div class="content-two-chek"><i class="fa-solid fa-check"></i><span>Desarrollo de aplicaciones back-end.</span></div>
-                <div class="content-two-chek"><i class="fa-solid fa-check"></i><span>Desarrollo de interfaces front-end.</span></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- RECURSOS TECNOLOGICOS -->
-    <div class="container-tree">
-        <div class="tree-card">
-            <div class="title-tree">
-                <h1>RECURSOS DE TECNOLOGIAS WEB Y PROGRAMACION</h1>
-            </div>
-            <div class="content-tree">
-                
-                <!-- Primera Fila -->
-                <div class="content-tree-logo">
-                    <img src="IMG/file_type_html_icon_130541.png">
-                    <p>Html</p>
-                </div>
-                <div class="content-tree-logo">
-                    <img src="IMG/file_type_css_icon_130661.png">
-                    <p>Css</p>
-                </div>
-                <div class="content-tree-logo">
-                    <img src="IMG/file_type_js_official_icon_130509.png">
-                    <p>Javascript</p>
-                </div>
-                
-                <div class="content-tree-logo">
-                    <img src="IMG/java_original_logo_icon_146458.png">
-                    <p>Java</p>
-                </div>
-                <div class="content-tree-logo">
-                    <img src="IMG/typescript_original_logo_icon_146317.png">
-                    <p>Typescript</p>
-                </div>
-                
-                <div class="content-tree-logo">
-                    <img src="IMG/sql-document-outlined-interface-symbol_icon-icons.com_57504.png">
-                    <p>Sql</p>
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="linkedin.com/in/erick-junior-flores-lizarbe-927186253"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="erick.flores@vallegrande.edu.pe"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://wa.me/51980439371"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <!---typed js for typing text effect-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+        /** creating button click show hide navbar **/
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+        var links = document.querySelector(".navlinks li");
 
-    <!-- RECURSOS ECOSISTEMA DE DESARROLLO -->
-    <div class="container-tree">
-        <div class="tree-card">
-            <div class="title-tree">
-                <h1>ECOSITEMA DE DESAROLLO</h1>
-            </div>
-            <div class="content-tree">
-                <!-- Segunda Fila -->
-                <div class="content-tree-logo">
-                    <img src="IMG/boot_spring_logo_icon_214693.png">
-                    <p>Spring boot</p>
-                </div>
-                <div class="content-tree-logo">
-                    <img src="IMG/file_type_angular_icon_130754.png">
-                    <p>Angular</p>
-                </div>
-                <div class="content-tree-logo">
-                    <img src="IMG/github.png">
-                    <p>GitHub</p>
-                </div>
-                <div class="content-tree-logo">
-                    <img src="IMG/kubernetes_logo_icon_168359.png">
-                    <p>Kubernetes</p>
-                </div>
-                <div class="content-tree-logo">
-                    <img src="IMG/docker_original_logo_icon_146556.png">
-                    <p>Docker</p>
-                </div>
-                
-                <div class="content-tree-logo">
-                    <img src="IMG/google_script_apps_logo_icon_159351.png">
-                    <p>Apps Script</p>
-                </div>
-            </div>
-        </div>
-    </div>
+        togglebtn.addEventListener("click", function () {
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
 
-    <!-- RECURSOS TECNOLOGICOS -->
-    <div class="container-tree">
-        <div class="tree-card">
-            <div class="title-tree">
-                <h1>IDE Y PLATAFORMAS</h1>
-            </div>
-            <div class="content-tree">
-                <!-- Tercera Fila -->
-                <div class="content-tree-logo">
-                    <img src="IMG/intellij_alt_macos_bigsur_icon_190060.png">
-                    <p>Intellij</p>
-                </div>
-                <div class="content-tree-logo">
-                    <img src="IMG/microsoft_visual_studio_code_alt_macos_bigsur_icon_189956.png">
-                    <p>Visual Studio</p>
-                </div>
-                <div class="content-tree-logo">
-                    <img src="IMG/xofficespreadsheet_92797.png">
-                    <p>Sheet</p>
-                </div>
-                <div class="content-tree-logo">
-                    <img src="IMG/looker_logo_icon_247812.png">
-                    <p>Looker Studio</p>
-                </div>
-                <div class="content-tree-logo">
-                    <img src="IMG/Trello_icon-icons.com_66775.png">
-                    <p>Trello</p>
-                </div>
-                <div class="content-tree-logo">
-                    <img src="IMG/figma_logo_icon_170157.png">
-                    <p>Figma</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
+        var typed = new Typed(".input", {
+            strings: ["Analista de Sistemas", "Desarrollador Web", "Programador de Apps Script", "Estratega de marketing digital"],
+            typedSpeed: 160,
+            backSpeed: 55,
+            loop: true
+        })
+    </script>
 </body>
 
 </html>
