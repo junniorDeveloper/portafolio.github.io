@@ -35,7 +35,7 @@ body {
     width: 350px;
     height: 350px;
     border-radius: 50%;
-    background-image: url(/IMG/portada.jpg);
+    background-image: url(IMG/portada.jpg);
     background-position: center;
     background-size: cover;
     margin: 0 auto;
