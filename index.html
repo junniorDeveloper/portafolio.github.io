@@ -14,26 +14,6 @@
 <body>
     <div class="hero-header">
         <div class="wrapper">
-            <header>
-                <div class="logo">
-                    
-                    <div class="logo-text">Erick Junior</div>
-                </div>
-                <nav>
-                    <div class="togglebtn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <ul class="navlinks">
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Portafolio</a></li>
-                        <li><a href="#">Resumen</a></li>
-                        <li><a href="#">Experiencia</a></li>
-                        <li><a href="#">Contacto</a></li>
-                    </ul>
-                </nav>
-            </header>
             <div class="container">
                 <div class="hero-pic">
                     <img src="images/portada.jpg" alt="profile pic">
@@ -62,15 +42,6 @@
     <!---typed js for typing text effect-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
     <script>
-        /** creating button click show hide navbar **/
-        var togglebtn = document.querySelector(".togglebtn");
-        var nav = document.querySelector(".navlinks");
-        var links = document.querySelector(".navlinks li");
-
-        togglebtn.addEventListener("click", function () {
-            this.classList.toggle("click");
-            nav.classList.toggle("open");
-        })
 
         var typed = new Typed(".input", {
             strings: ["Analista de Sistemas", "Desarrollador Web", "Programador de Apps Script", "Estratega de marketing digital"],
