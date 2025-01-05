@@ -335,7 +335,6 @@ body {
 }
 
 
-
 .card {
     background-color: #333; /* Color de fondo de las tarjetas */
     border-radius: 10px;
@@ -344,6 +343,15 @@ body {
     transition: transform 0.3s ease; /* Transición suave para el hover */
     display: flex; /* Usamos flexbox para las imágenes */
     flex-direction: column; /* Las imágenes se apilan verticalmente */
+    animation: breathe 2s infinite; /* Efecto de respiración */
+}
+@keyframes breathe {
+    0%, 100% {
+        box-shadow: rgba(255, 255, 255, 0.193) 0px 1px 4px; /* Sombra inicial */
+    }
+    50% {
+        box-shadow: rgba(255, 255, 255, 0.287) 0px 5px 10px; /* Sombra más intensa */
+    }
 }
 
 .card:hover {
@@ -369,6 +377,36 @@ body {
     text-align: left;
     color: #e5e5e5;
 }
+
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Posición fija */
+    z-index: 1000; /* Por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+    justify-content: center; /* Centrado */
+    align-items: center; /* Centrado */
+    backdrop-filter: blur(5px); /* Efecto de desenfoque */
+}
+
+.modal-content {
+    max-width: 90%; /* Máximo ancho */
+    max-height: 90%; /* Máxima altura */
+}
+
+.close {
+    position: absolute; /* Posición absoluta */
+    top: 20px; /* Espaciado desde arriba */
+    right: 30px; /* Espaciado desde la derecha */
+    color: white; /* Color del ícono */
+    font-size: 30px; /* Tamaño del ícono */
+    cursor: pointer; /* Cursor de puntero */
+    z-index: 1001;
+}
+
 
 /* Media query para pantallas más pequeñas */
 @media (max-width: 768px) {

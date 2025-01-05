@@ -101,43 +101,50 @@
             
             <div class="content-proyect">
                 <div class="card">
-                    <img src="images/card.jpg">
+                    <img src="images/Sistema.gif" onclick="openModal(this)">
                     <div class="card-content">
                         <p>Sistema de Ventas</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="images/card2.png">
+                    <img src="images/card2.png" onclick="openModal(this)">
                     <div class="card-content">
                         <p>Automatizacion de Pedidos</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="images/card3.jpg">
+                    <img src="images/card3.jpg" onclick="openModal(this)">
                     <div class="card-content">
                         <p>Sistema de Seguimientos</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="images/card4.jpg">
+                    <img src="images/card4.jpg" onclick="openModal(this)">
                     <div class="card-content">
                         <p>Control de Finazas Personales</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="images/card5.jpg">
+                    <img src="images/card5.jpg" onclick="openModal(this)">
                     <div class="card-content">
                         <p>Pagina Escolar</p>
                     </div>
                 </div>
                 
                 <div class="card">
-                    <img src="images/card6.png">
+                    <img src="images/card6.png" onclick="openModal(this)">
                     <div class="card-content">
                         <p>Dashboard Estadistico</p>
                     </div>
                 </div>
             </div>
+
+            <!-- Modal para la vista previa de la imagen -->
+            <div id="imageModal" class="modal" onclick="closeModal()">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img class="modal-content" id="modalImage">
+            </div>
+
         </div>
 
     </div>
@@ -146,8 +153,9 @@
 
     <!---typed js for typing text effect-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
-    <script>
 
+    <!-- CAMBIO DE TITULO -->
+    <script>
         var typed = new Typed(".input", {
             strings: ["Analista de Sistemas", "Desarrollador Web", "Programador de Apps Script", "Estratega de marketing digital"],
             typedSpeed: 160,
@@ -156,6 +164,7 @@
         })
     </script>
 
+    <!-- BOTON DE MENU DE NAVEGACION -->
     <script>
         function toggleMenu() {
             const nav = document.querySelector('.nav');
@@ -163,6 +172,7 @@
         }
     </script>
 
+    <!-- MOVIMIENTO DE TITULO DE TODAS LA SECCIONES -->
     <script>
         function animateElement(element, show) {
         if (show) {
@@ -192,7 +202,20 @@
         cicloTexto();
     </script>
 
-    
+    <!-- MODAL PARA LAS IMAGENES DE EXPERIENCIA -->
+    <script>
+        function openModal(img) {
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("modalImage");
+            modal.style.display = "flex"; // Muestra el modal
+            modalImg.src = img.src; // Establece la fuente de la imagen
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("imageModal");
+            modal.style.display = "none"; // Oculta el modal
+        }
+    </script>
 
 
 </body>
