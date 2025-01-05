@@ -248,7 +248,19 @@ body {
     align-items: flex-start;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    box-shadow: rgba(255, 255, 255, 0.331) 0px 1px 4px;
+    animation: new 2s infinite; /* Efecto de respiración */
 }
+
+@keyframes new {
+    0%, 100% {
+        box-shadow: rgba(255, 255, 255, 0.15) 1.95px 1.95px 2.6px; /* Sombra inicial */
+    }
+    50% {
+        box-shadow: rgba(255, 255, 255, 0.5) 5px 5px 10px; /* Sombra más intensa */
+    }
+}
+
 
 .container-tecnologi h1 {
     color: #e6e6e6;
@@ -328,31 +340,33 @@ body {
     height: auto;
     padding: 20px; /* Aumenté el padding para mejor espaciado */
     background: rgba(198, 198, 198, 0.086);
+    box-shadow: rgba(255, 255, 255, 0.15) 1.95px 1.95px 2.6px;
     border-radius: 20px;
     display: grid; /* Usamos grid para un mejor control */
     grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
     grid-gap: 20px; /* Espacio entre las tarjetas */
-}
-
-
-.card {
-    background-color: #333; /* Color de fondo de las tarjetas */
-    border-radius: 10px;
-    box-shadow: rgba(255, 255, 255, 0.331) 0px 1px 4px;
-    overflow: hidden; /* Para que la imagen no se salga */
-    transition: transform 0.3s ease; /* Transición suave para el hover */
-    display: flex; /* Usamos flexbox para las imágenes */
-    flex-direction: column; /* Las imágenes se apilan verticalmente */
     animation: breathe 2s infinite; /* Efecto de respiración */
 }
 @keyframes breathe {
     0%, 100% {
-        box-shadow: rgba(255, 255, 255, 0.193) 0px 1px 4px; /* Sombra inicial */
+        box-shadow: rgba(255, 255, 255, 0.15) 1.95px 1.95px 2.6px; /* Sombra inicial */
     }
     50% {
-        box-shadow: rgba(255, 255, 255, 0.287) 0px 5px 10px; /* Sombra más intensa */
+        box-shadow: rgba(255, 255, 255, 0.5) 5px 5px 10px; /* Sombra más intensa */
     }
 }
+
+.card {
+    background-color: #333; /* Color de fondo de las tarjetas */
+    border-radius: 10px;
+    
+    overflow: hidden; /* Para que la imagen no se salga */
+    transition: transform 0.3s ease; /* Transición suave para el hover */
+    display: flex; /* Usamos flexbox para las imágenes */
+    flex-direction: column; /* Las imágenes se apilan verticalmente */
+    
+}
+
 
 .card:hover {
     transform: scale(1.05); /* Escala ligeramente al pasar el mouse */
@@ -376,6 +390,7 @@ body {
     font-size: 14px;
     text-align: left;
     color: #e5e5e5;
+    font-weight: bold;
 }
 
 .modal {
@@ -418,5 +433,14 @@ body {
     }
     .card img {
         height: 150px; /* Altura de imagen más pequeña */
+    }
+    .card-content {
+        padding: 10px;
+        color: #eee;
+    }
+
+    .card-content p {
+        font-size: 12px;
+        
     }
 }
