@@ -14,8 +14,8 @@
 <body>
     <div class="hero-header">
 
+        <!-- MENU DE NAVEGACION -->
         <div class="header">
-
             <div class="header-movil">
                 <h1>Erick Junior</h1>
                 <button class="menu-button" onclick="toggleMenu()">Mostrar</button>
@@ -25,11 +25,12 @@
                 <a href="#sobre-mi">Sobre mí</a>
                 <a href="#tecnologias">Tecnologías</a>
                 <a href="#proyectos">Proyectos</a>
-                <a href="#formacion">Formación</a>
+                <!-- <a href="#formacion">Formación</a> -->
                 <a href="#contacto">Contacto</a>
             </nav>
         </div>
     
+        <!-- CONTENIDO PRIMERA SECCION SOBRE MI -->
         <div class="wrapper">
             <div class="container">
                 <div class="hero-pic">
@@ -49,9 +50,9 @@
                     </div>
 
                     <div class="social">
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <i class="fas fa-envelope" onclick="navigator.clipboard.writeText('juniorsking741@gmail.com').then(() => alert('¡Listo! El correo juniorsking741@gmail.com se ha copiado.')).catch(() => alert('Error'));"></i>
                         <a href="https://linkedin.com/in/erick-junior-flores-lizarbe-927186253"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://erick.flores@vallegrande.edu.pe"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://github.com/junniorDeveloper"><i class="fab fa-github"></i></a>
                         <a href="https://wa.me/51980439371"><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
                 </div>
@@ -61,10 +62,9 @@
         
         <!-- RECURSOS TECNOLOGICOS -->
         <div class="container-tecnologi">
-            <h1 id="titulo">Dominio de Tecnologías</h1>
+            <h1 id="titulo-tecnologi">Dominio de Tecnologías</h1>
 
             <div class="content-tecnologi">
-                <!-- Primera Fila -->
                 <div class="content-tecnologi-logo">
                     <i class="fab fa-html5 fa-3x" style="color: #E34F26;"></i>
                     <p>Html</p>
@@ -95,6 +95,51 @@
             </div>
         </div>
 
+        <!-- RECURSOS TECNOLOGICOS -->
+        <div class="container-proyect">
+            <h1 id="titulo-proyect">Experiencia en Proyectos</h1>
+            
+            <div class="content-proyect">
+                <div class="card">
+                    <img src="/images/card.jpg">
+                    <div class="card-content">
+                        <p>Sistema de Ventas</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/images/card2.png">
+                    <div class="card-content">
+                        <p>Automatizacion de Pedidos</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/images/card3.jpg">
+                    <div class="card-content">
+                        <p>Sistema de Seguimientos</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/images/card4.jpg">
+                    <div class="card-content">
+                        <p>Control de Finazas Personales</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/images/card5.jpg">
+                    <div class="card-content">
+                        <p>Pagina Escolar</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="/images/card6.png">
+                    <div class="card-content">
+                        <p>Dashboard Estadistico</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 
@@ -119,26 +164,35 @@
     </script>
 
     <script>
-        const titulo = document.getElementById('titulo');
-
-        function mostrarTexto() {
-            titulo.style.opacity = 1; // Hacer visible el texto
-            titulo.style.transform = 'translateX(0)'; // Mover a la posición final
+        function animateElement(element, show) {
+        if (show) {
+            element.style.opacity = 1;
+            element.style.transform = 'translateX(0)';
+        } else {
+            element.style.opacity = 0;
+            element.style.transform = 'translateX(-100%)';
+        }
         }
 
-        function ocultarTexto() {
-            titulo.style.opacity = 0; // Hacer invisible el texto
-            titulo.style.transform = 'translateX(-100%)'; // Mover fuera de la vista
-        }
+        const tituloTecnologi = document.getElementById('titulo-tecnologi');
+        const tituloProyect = document.getElementById('titulo-proyect');
 
         function cicloTexto() {
-            mostrarTexto(); // Mostrar el texto
-            setTimeout(ocultarTexto, 4000); // Ocultar después de 4 segundos
-            setTimeout(cicloTexto, 7000); // Reiniciar el ciclo después de 7 segundos (3s visible + 3s de animación)
+        animateElement(tituloTecnologi, true); // Show tituloTecnologi
+        animateElement(tituloProyect, true);  // Show tituloProyect
+
+        setTimeout(() => {
+            animateElement(tituloTecnologi, false); // Hide tituloTecnologi
+            animateElement(tituloProyect, false);  // Hide tituloProyect
+        }, 4000);
+
+        setTimeout(cicloTexto, 5000);
         }
 
         cicloTexto();
     </script>
+
+    
 
 
 </body>
