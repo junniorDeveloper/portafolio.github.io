@@ -18,7 +18,7 @@
 
             <div class="header-movil">
                 <h1>Erick Junior</h1>
-                <button class="menu-button" onclick="toggleMenu()">Menú</button>
+                <button class="menu-button" onclick="toggleMenu()">Mostrar</button>
             </div>
             
             <nav class="nav">
@@ -38,7 +38,9 @@
                 <div class="hero-text">
                     <h5>Hola, yo soy <span class="input"></span></h5> <!--programing-->
                     <h1>Erick Junior</h1>
-                    <p> Me apasiona aprender y compartir conocimientos. He trabajado como desarrollador en proyectos de landing pages y sistemas de ventas. Participé en el programa de Futuros Empresarios de la PAD, donde aprendí sobre marketing digital, liderazgo y gestión comercial. Siempre busco nuevas oportunidades para aplicar mis habilidades. Recuerda: "Siempre da lo mejor de ti". ¡Contáctame para colaborar o intercambiar ideas!
+                    <p> Me apasiona aprender y compartir conocimientos. He trabajado como desarrollador en proyectos de landing pages y sistemas de ventas.
+                        Participé en el programa de Futuros Empresarios de la PAD, donde aprendí sobre marketing digital, liderazgo y gestión comercial.
+                        Siempre busco nuevas oportunidades para aplicar mis habilidades. Recuerda: "Siempre da lo mejor de ti". ¡Contáctame para colaborar o intercambiar ideas!
                     </p>
 
                     <div class="btn-group">
@@ -55,7 +57,48 @@
                 </div>
             </div>
         </div>
+
+        
+        <!-- RECURSOS TECNOLOGICOS -->
+        <div class="container-tecnologi">
+            <h1 id="titulo">Dominio de Tecnologías</h1>
+
+            <div class="content-tecnologi">
+                <!-- Primera Fila -->
+                <div class="content-tecnologi-logo">
+                    <i class="fab fa-html5 fa-3x" style="color: #E34F26;"></i>
+                    <p>Html</p>
+                </div>
+                <div class="content-tecnologi-logo">
+                    <i class="fab fa-css3-alt fa-3x" style="color: #1572B6;"></i>
+                    <p>Css</p>
+                </div>
+                <div class="content-tecnologi-logo">
+                    <i class="fab fa-js fa-3x" style="color: #F7DF1E;"></i>
+                    <p>Javascript</p>
+                </div>
+        
+                <div class="content-tecnologi-logo">
+                    <i class="fas fa-file-code fa-3x" style="color: #4285F4;"></i>
+                    <p>Apps Script</p>
+                </div>
+
+                <div class="content-tecnologi-logo">
+                    <i class="fab fa-java fa-3x" style="color: #007396;"></i>
+                    <p>Java</p>
+                </div>
+        
+                <div class="content-tecnologi-logo">
+                    <i class="fas fa-database fa-3x" style="color: #00618A;"></i>
+                    <p>Sql</p>
+                </div>
+            </div>
+        </div>
+
     </div>
+
+
+
     <!---typed js for typing text effect-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
     <script>
@@ -74,6 +117,29 @@
             nav.classList.toggle('active');
         }
     </script>
+
+    <script>
+        const titulo = document.getElementById('titulo');
+
+        function mostrarTexto() {
+            titulo.style.opacity = 1; // Hacer visible el texto
+            titulo.style.transform = 'translateX(0)'; // Mover a la posición final
+        }
+
+        function ocultarTexto() {
+            titulo.style.opacity = 0; // Hacer invisible el texto
+            titulo.style.transform = 'translateX(-100%)'; // Mover fuera de la vista
+        }
+
+        function cicloTexto() {
+            mostrarTexto(); // Mostrar el texto
+            setTimeout(ocultarTexto, 4000); // Ocultar después de 4 segundos
+            setTimeout(cicloTexto, 7000); // Reiniciar el ciclo después de 7 segundos (3s visible + 3s de animación)
+        }
+
+        cicloTexto(); // Iniciar el ciclo
+    </script>
+
 
 </body>
 
