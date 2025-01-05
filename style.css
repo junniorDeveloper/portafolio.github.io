@@ -11,23 +11,15 @@
 body {
     background: #222;
     overflow-x: hidden;
-    border: solid 1px red; 
 }
-#particles-js {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    z-index: -1;
-}
+
 
 /* PRIMERA SECCION MUESTRA EL MENU Y INFORMACION SOBRE MI*/
 .hero-header {
     padding-top: 80px;
     width: 100%;
     height: auto;
-    position: relative; /* Necesario para el posicionamiento del canvas */
 }
-
 
 
 
@@ -247,7 +239,6 @@ body {
     height: auto;
     padding: 3% 0;
 }
-
 .content-tecnologi {
     width: 90%;
     height: auto;
