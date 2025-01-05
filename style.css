@@ -11,6 +11,13 @@
 body {
     background: #222;
     overflow-x: hidden;
+    border: solid 1px red; 
+}
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: -1;
 }
 
 /* PRIMERA SECCION MUESTRA EL MENU Y INFORMACION SOBRE MI*/
@@ -18,8 +25,12 @@ body {
     padding-top: 80px;
     width: 100%;
     height: auto;
-    background: #222;
+    position: relative; /* Necesario para el posicionamiento del canvas */
 }
+
+
+
+
 
 /* MUESTRA EL MENU DE NAVEGACION RESPONSIVO */
 .header {
@@ -235,7 +246,6 @@ body {
     justify-content: center;
     height: auto;
     padding: 3% 0;
-    background: #222;
 }
 
 .content-tecnologi {
@@ -257,7 +267,7 @@ body {
         box-shadow: rgba(255, 255, 255, 0.15) 1.95px 1.95px 2.6px; /* Sombra inicial */
     }
     50% {
-        box-shadow: rgba(255, 255, 255, 0.5) 5px 5px 10px; /* Sombra más intensa */
+        box-shadow: rgba(255, 255, 255, 0.5) 1px 1px 6px; /* Sombra más intensa */
     }
 }
 
@@ -321,7 +331,6 @@ body {
     justify-content: center;
     height: auto;
     padding: 0% 0;
-    background: #222;
 }
 
 .container-proyect h1 {
@@ -352,7 +361,7 @@ body {
         box-shadow: rgba(255, 255, 255, 0.15) 1.95px 1.95px 2.6px; /* Sombra inicial */
     }
     50% {
-        box-shadow: rgba(255, 255, 255, 0.5) 5px 5px 10px; /* Sombra más intensa */
+        box-shadow: rgba(255, 255, 255, 0.5) 1px 1px 6px; /* Sombra más intensa */ /* Sombra más intensa */
     }
 }
 
