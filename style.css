@@ -14,6 +14,164 @@ body {
 }
 
 
+@keyframes hero-gradient-animation {
+    0% {
+        --s-start-0: 2%;
+        --s-end-0: 78.72573401919361%;
+        --c-0: hsla(55, 0%, 100%, 0.86);
+        --y-0: 98%;
+        --x-0: 98%;
+    }
+
+    100% {
+        --s-start-0: 2%;
+        --s-end-0: 78.72573401919361%;
+        --c-0: hsla(284, 0%, 100%, 0.86);
+        --y-0: 98%;
+        --x-0: 2%;
+    }
+}
+
+@property --s-start-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 2%
+}
+
+@property --s-end-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 78.72573401919361%
+}
+
+@property --c-0 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(55, 0%, 100%, 0.86)
+}
+
+@property --y-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 98%
+}
+
+@property --x-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 98%
+}
+
+@property --y-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 91%
+}
+
+@property --c-1 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(0, 0%, 0%, 1)
+}
+
+@property --s-start-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 2%
+}
+
+@property --s-end-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 78.72573401919361%
+}
+
+@property --x-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 98%
+}
+
+@property --x-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 16%
+}
+
+@property --y-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 87%
+}
+
+@property --s-start-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 2%
+}
+
+@property --s-end-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 61.288600779667334%
+}
+
+@property --c-2 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(212, 0%, 29%, 1)
+}
+
+@property --x-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 52%
+}
+
+@property --c-3 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(212.3684210526316, 72%, 58%, 1)
+}
+
+@property --s-start-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 2%
+}
+
+@property --s-end-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 61.288600779667334%
+}
+
+@property --y-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 79%
+}
+
+body {
+    --c-0: hsla(55, 0%, 100%, 0.86);
+    --y-0: 98%;
+    --x-0: 98%;
+    --y-1: 91%;
+    --c-1: hsla(0, 0%, 0%, 1);
+    --x-1: 98%;
+    --x-2: 16%;
+    --y-2: 87%;
+    --c-2: hsla(212, 0%, 29%, 1);
+    --x-3: 52%;
+    --c-3: hsla(212.3684210526316, 72%, 58%, 1);
+    --y-3: 79%;
+    ;
+    background-color: hsla(198, 14%, 16%, 1);
+    background-image: radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0), transparent var(--s-end-0)), radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1), transparent var(--s-end-1)), radial-gradient(circle at var(--x-2) var(--y-2), var(--c-2) var(--s-start-2), transparent var(--s-end-2)), radial-gradient(circle at var(--x-3) var(--y-3), var(--c-3) var(--s-start-3), transparent var(--s-end-3));
+    animation: hero-gradient-animation 10s linear infinite alternate;
+    background-blend-mode: overlay, normal, normal, normal;
+}
+
 /* PRIMERA SECCION MUESTRA EL MENU Y INFORMACION SOBRE MI*/
 .hero-header {
     padding-top: 80px;
@@ -330,7 +488,7 @@ body {
     align-items: center;
     justify-content: center;
     height: auto;
-    padding: 0% 0;
+    padding-bottom: 50px;
 }
 
 .container-proyect h1 {
@@ -449,7 +607,85 @@ body {
     }
 
     .card-content p {
-        font-size: 12px;
+        font-size: 14px;
         
     }
 }
+
+
+
+
+
+.footer {
+    position: relative;
+    width: 100%;
+    background: rgba(198, 198, 198, 0.086);
+    backdrop-filter: blur(10px);
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 5px;
+    flex-wrap: wrap;
+  }
+  
+  .icon-elem {
+    list-style: none;
+  }
+  
+  .icon {
+    color: white;
+    font-size: 32px;
+    display: inline-block;
+    margin: 0 10px;
+    transition: 0.5s;
+  }
+  
+  .icon:hover {
+    transform: translateY(-10px);
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+  }
+  
+  .menu-elem {
+    list-style: none;
+  }
+  .menu-icon {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px 10px;
+    opacity: 0.5;
+    transition: 0.3s;
+  }
+  
+  .menu-icon:hover {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
