@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Portfolio Website Design</title>
+    <title>Mi Portafolio - Erick Junior</title>
+    <link rel="icon" href="images/icon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <!----Font awesome cdn  font icon css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-
 </head>
 
 <body>
-
+    <!-- CONTENEDOR DE LA PAGINA WEB -->
     <div class="hero-header">
 
         <!-- MENU DE NAVEGACION -->
@@ -22,7 +22,7 @@
                 <h1>Erick Junior</h1>
                 <button class="menu-button" onclick="toggleMenu()">Mostrar</button>
             </div>
-            
+
             <nav class="nav">
                 <a href="#wrapper">Sobre mí</a>
                 <a href="#container-tecnologi">Tecnologías</a>
@@ -30,7 +30,7 @@
                 <a href="#footer">Contacto</a>
             </nav>
         </div>
-    
+
         <!-- CONTENIDO PRIMERA SECCION SOBRE MI -->
         <div id="wrapper">
             <div class="container">
@@ -40,31 +40,34 @@
                 <div class="hero-text">
                     <h5>Hola, yo soy <span class="input"></span></h5> <!--programing-->
                     <h1>Erick Junior</h1>
-                    <p> Me apasiona aprender y compartir conocimientos. He trabajado como desarrollador en proyectos de landing pages y sistemas de ventas.
-                        Participé en el programa de Futuros Empresarios de la PAD, donde aprendí sobre marketing digital, liderazgo y gestión comercial.
-                        Siempre busco nuevas oportunidades para aplicar mis habilidades. Recuerda: "Siempre da lo mejor de ti". ¡Contáctame para colaborar o intercambiar ideas!
+                    <p> Me apasiona aprender y compartir conocimientos. He trabajado como desarrollador en proyectos de
+                        landing pages y sistemas de ventas.
+                        Participé en el programa de Futuros Empresarios de la PAD, donde aprendí sobre marketing
+                        digital, liderazgo y gestión comercial.
+                        Siempre busco nuevas oportunidades para aplicar mis habilidades. Recuerda: "Siempre da lo mejor
+                        de ti". ¡Contáctame para colaborar o intercambiar ideas!
                     </p>
 
                     <div class="btn-group">
-                        <a href="doc/Erick Flores CV.pdf" class="btn active">Ver CV</a>
-                        <a href="https://wa.me/51980439371" class="btn">Contacto</a>
+                        <a href="doc/Erick Flores CV.pdf" class="btn active" target="_blank">Ver CV</a>
+                        <a href="https://wa.me/51980439371" class="btn" target="_blank">Contacto</a>
                     </div>
 
                     <div class="social">
-                        <i class="fas fa-envelope" onclick="navigator.clipboard.writeText('juniorsking741@gmail.com').then(() => alert('¡Listo! El correo juniorsking741@gmail.com se ha copiado.')).catch(() => alert('Error'));"></i>
-                        <a href="https://linkedin.com/in/erick-junior-flores-lizarbe-927186253"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://github.com/junniorDeveloper"><i class="fab fa-github"></i></a>
-                        <a href="https://wa.me/51980439371"><i class="fa-brands fa-whatsapp"></i></a>
+                        <i class="fas fa-envelope"
+                            onclick="navigator.clipboard.writeText('juniorsking741@gmail.com').then(() => alert('¡Listo! El correo juniorsking741@gmail.com se ha copiado.')).catch(() => alert('Error'));"></i>
+                        <a href="https://linkedin.com/in/erick-junior-flores-lizarbe-927186253" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/junniorDeveloper" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://wa.me/51980439371" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
         </div>
 
-        
-        <!-- RECURSOS TECNOLOGICOS -->
+
+        <!-- SEGUNDA SECION RECURSOS TECNOLOGICOS -->
         <div id="container-tecnologi">
-            
-            <div id="particles-js"></div>
 
             <h1 id="titulo-tecnologi">Dominio de Tecnologías</h1>
 
@@ -82,11 +85,11 @@
                     <p>Javascript</p>
                 </div>
                 <div class="content-tecnologi-logo">
-                    <i class="fas fa-file-code fa-3x bouncing-icon" style="color: #4285F4;"></i>
+                    <i class="fas fa-file-code fa-3x bouncing-icon" style="color: #0c89af;"></i>
                     <p>Apps Script</p>
                 </div>
                 <div class="content-tecnologi-logo">
-                    <i class="fab fa-java fa-3x bouncing-icon" style="color: #007396;"></i>
+                    <i class="fab fa-java fa-3x bouncing-icon" style="color: #d8d8d8;"></i>
                     <p>Java</p>
                 </div>
                 <div class="content-tecnologi-logo">
@@ -96,47 +99,47 @@
             </div>
         </div>
 
-        <!-- EXPERIENCIA PROYECTOS -->
+        <!-- TERCERA SECCION DE EXPERIENCIA EN PROYECTOS -->
         <div id="container-proyect">
-            
+
             <h1 id="titulo-proyect">Experiencia en Proyectos</h1>
-            
+
             <div class="content-proyect">
                 <div class="card">
-                    <img src="images/Sistema.gif" onclick="openModal(this)">
+                    <img src="images/card1.gif" onclick="openModal(this)">
                     <div class="card-content">
-                        <p>Sistema de Ventas</p>
+                        <p class="bouncing-p">Sistema de Ventas</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="images/card2.gif" onclick="openModal(this)">
                     <div class="card-content">
-                        <p>Gestión de Pedido</p>
+                        <p class="bouncing-p">Gestión de Pedido</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="images/card3.gif" onclick="openModal(this)">
                     <div class="card-content">
-                        <p>Sistema de Seguimientos</p>
+                        <p class="bouncing-p">Sistema de Benefiarios</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="images/card4.gif" onclick="openModal(this)">
                     <div class="card-content">
-                        <p>Control Financiero</p>
+                        <p class="bouncing-p">Control Financiero</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="images/card5.gif" onclick="openModal(this)">
                     <div class="card-content">
-                        <p>Sitio Web Escolar</p>
+                        <p class="bouncing-p">Sitio Web Escolar</p>
                     </div>
                 </div>
-                
+
                 <div class="card">
                     <img src="images/card6.gif" onclick="openModal(this)">
                     <div class="card-content">
-                        <p>Reporte Estadístico</p>
+                        <p class="bouncing-p">Reporte Estadístico</p>
                     </div>
                 </div>
             </div>
@@ -149,26 +152,27 @@
         </div>
 
 
-    
+        <!-- CUARTA SECCION FOOTER DE CONTACTO -->
         <footer id="footer">
             <ul class="social-icon">
                 <li class="icon-elem">
-                    <a href="https://linkedin.com/in/erick-junior-flores-lizarbe-927186253" class="icon">
+                    <a href="https://linkedin.com/in/erick-junior-flores-lizarbe-927186253" class="icon" target="_blank">
                         <i class="fab fa-linkedin"></i> </a>
                 </li>
                 <li class="icon-elem">
-                    <a href="https://www.youtube.com/@ErickJuniorFLORESLIZARBE" class="icon">
+                    <a href="https://www.youtube.com/@ErickJuniorFLORESLIZARBE" class="icon" target="_blank">
                         <i class="fab fa-youtube"></i> </a>
                 </li>
                 <li class="icon-elem">
-                    <i class="icon fas fa-envelope" onclick="navigator.clipboard.writeText('juniorsking741@gmail.com').then(() => alert('¡Listo! El correo juniorsking741@gmail.com se ha copiado.')).catch(() => alert('Error'));"></i>
+                    <i class="icon fas fa-envelope"
+                        onclick="navigator.clipboard.writeText('juniorsking741@gmail.com').then(() => alert('¡Listo! El correo juniorsking741@gmail.com se ha copiado.')).catch(() => alert('Error'));"></i>
                 </li>
                 <li class="icon-elem">
-                    <a href="https://github.com/junniorDeveloper" class="icon">
+                    <a href="https://github.com/junniorDeveloper" class="icon" target="_blank">
                         <i class="fab fa-github"></i> </a>
                 </li>
                 <li class="icon-elem">
-                    <a href="https://wa.me/51980439371" class="icon">
+                    <a href="https://wa.me/51980439371" class="icon" target="_blank">
                         <i class="fab fa-whatsapp"></i> </a>
                 </li>
             </ul>
@@ -177,27 +181,25 @@
                     <a href="#wrapper" class="menu-icon"> Inicio </a>
                 </li>
                 <li class="menu-elem">
-                    <a href="" class="menu-icon"> Equipo </a>
+                    <a href="https://vallegrande.edu.pe/" class="menu-icon" target="_blank"> Formacion </a>
                 </li>
                 <li class="menu-elem">
-                    <a href="https://wa.me/51980439371" class="menu-icon"> Contacto </a>
+                    <a href="https://wa.me/51980439371" class="menu-icon" target="_blank"> Contacto </a>
                 </li>
                 <li class="menu-elem">
-                    <a href="doc/Erick Flores CV.pdf" class="menu-icon"> Mi CV</a>
+                    <a href="doc/Erick Flores CV.pdf" class="menu-icon" target="_blank"> Mi CV</a>
                 </li>
             </ul>
             <p class="text">2025 | Erick Junior Flores</p>
-          </footer>
-        
+        </footer>
+
 
     </div>
 
     <!---typed js for typing text effect-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
-    
-    
 
-    <!-- CAMBIO DE TITULO -->
+    <!-- PRIMERA SECCION - CAMBIO DE TITULO -->
     <script>
         var typed = new Typed(".input", {
             strings: ["Analista de Sistemas", "Desarrollador Web", "Programador de Apps Script", "Estratega de marketing digital"],
@@ -207,7 +209,7 @@
         })
     </script>
 
-    <!-- BOTON DE MENU DE NAVEGACION -->
+    <!-- PRIMERA SECCION - BOTON DE MENU DE NAVEGACION -->
     <script>
         function toggleMenu() {
             const nav = document.querySelector('.nav');
@@ -218,45 +220,45 @@
     <!-- MOVIMIENTO DE TITULO DE TODAS LA SECCIONES -->
     <script>
         function animateElement(element, show) {
-        if (show) {
-            element.style.opacity = 1;
-            element.style.transform = 'translateX(0)';
-        } else {
-            element.style.opacity = 0;
-            element.style.transform = 'translateX(-100%)';
-        }
+            if (show) {
+                element.style.opacity = 1;
+                element.style.transform = 'translateX(0)';
+            } else {
+                element.style.opacity = 0;
+                element.style.transform = 'translateX(-100%)';
+            }
         }
 
         const tituloTecnologi = document.getElementById('titulo-tecnologi');
         const tituloProyect = document.getElementById('titulo-proyect');
 
         function cicloTexto() {
-        animateElement(tituloTecnologi, true); // Show tituloTecnologi
-        animateElement(tituloProyect, true);  // Show tituloProyect
+            animateElement(tituloTecnologi, true);
+            animateElement(tituloProyect, true);
 
-        setTimeout(() => {
-            animateElement(tituloTecnologi, false); // Hide tituloTecnologi
-            animateElement(tituloProyect, false);  // Hide tituloProyect
-        }, 4000);
+            setTimeout(() => {
+                animateElement(tituloTecnologi, false);
+                animateElement(tituloProyect, false);
+            }, 4000);
 
-        setTimeout(cicloTexto, 5000);
+            setTimeout(cicloTexto, 5000);
         }
 
         cicloTexto();
     </script>
 
-    <!-- MODAL PARA LAS IMAGENES DE EXPERIENCIA -->
+    <!-- TERCERA SECCION SECCION - MODAL PARA LAS IMAGENES DE EXPERIENCIA -->
     <script>
         function openModal(img) {
             const modal = document.getElementById("imageModal");
             const modalImg = document.getElementById("modalImage");
-            modal.style.display = "flex"; // Muestra el modal
-            modalImg.src = img.src; // Establece la fuente de la imagen
+            modal.style.display = "flex";
+            modalImg.src = img.src;
         }
 
         function closeModal() {
             const modal = document.getElementById("imageModal");
-            modal.style.display = "none"; // Oculta el modal
+            modal.style.display = "none";
         }
     </script>
 

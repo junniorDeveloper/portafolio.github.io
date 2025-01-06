@@ -1,6 +1,5 @@
-/* border: solid 1px red; */
 html {
-    scroll-behavior: smooth; /* Añade scroll suave */
+    scroll-behavior: smooth; 
 }
 
 * {
@@ -16,6 +15,7 @@ body {
     overflow-x: hidden;
 }
 
+/* background dl body con efectos de movimientos */
 @keyframes hero-gradient-animation {
     0% {
         --y-0: 16%;
@@ -168,9 +168,6 @@ body {
     height: auto;
 }
 
-
-
-
 /* MUESTRA EL MENU DE NAVEGACION RESPONSIVO */
 .header {
     position: fixed;
@@ -228,7 +225,7 @@ body {
     .header {
         background: rgba(198, 198, 198, 0.086);
         flex-direction: column;
-        align-items: start;  /* CAMBIO DE POSICION MENU RESPOSIVE */
+        align-items: start;
     }
 
     .header-movil {
@@ -279,7 +276,7 @@ body {
     justify-content: space-around;
     align-items: center;
     padding-top: 4rem;
-    
+
 }
 
 .container .hero-pic {
@@ -389,6 +386,7 @@ body {
     padding: 3% 0;
     scroll-margin-top: 60px;
 }
+
 .content-tecnologi {
     width: 90%;
     height: auto;
@@ -400,15 +398,18 @@ body {
     justify-content: space-evenly;
     flex-wrap: wrap;
     box-shadow: rgba(255, 255, 255, 0.331) 0px 1px 4px;
-    animation: new 2s infinite; /* Efecto de respiración */
+    animation: new 2s infinite;
 }
 
 @keyframes new {
-    0%, 100% {
-        box-shadow: rgba(255, 255, 255, 0.15) 1.95px 1.95px 2.6px; /* Sombra inicial */
+
+    0%,
+    100% {
+        box-shadow: rgba(255, 255, 255, 0.15) 1.95px 1.95px 2.6px;
     }
+
     50% {
-        box-shadow: rgba(255, 255, 255, 0.5) 1px 1px 6px; /* Sombra más intensa */
+        box-shadow: rgba(255, 255, 255, 0.5) 1px 1px 6px;
     }
 }
 
@@ -434,16 +435,19 @@ body {
 }
 
 .bouncing-icon {
-    animation: bounce 1.7s ease-in-out infinite; /* Animación de rebote */
-    display: inline-block; /*Para que funcione el efecto*/
+    animation: bounce 1.7s ease-in-out infinite;
+    display: inline-block;
 }
 
 @keyframes bounce {
-    0%, 100% {
-        transform: translateY(2) scaleY(1); /* Posición inicial */
+
+    0%,
+    100% {
+        transform: translateY(2) scaleY(1);
     }
+
     40% {
-        transform: translateY(-8px) scaleY(1); /* Rebote hacia arriba y estiramiento */
+        transform: translateY(-8px) scaleY(1);
     }
 }
 
@@ -473,7 +477,7 @@ body {
     }
 }
 
-/* MUESTRA SEGUNDA SECCION SOBRE LOS PROYECTOS QUE REALICE */
+/* MUESTRA TERCERA SECCION SOBRE LOS PROYECTOS QUE REALICE */
 #container-proyect {
     display: flex;
     flex-direction: column;
@@ -498,45 +502,48 @@ body {
 .content-proyect {
     width: 90%;
     height: auto;
-    padding: 20px; /* Aumenté el padding para mejor espaciado */
+    padding: 20px;
     background: rgba(198, 198, 198, 0.086);
     box-shadow: rgba(255, 255, 255, 0.15) 1.95px 1.95px 2.6px;
     border-radius: 10px;
-    display: grid; /* Usamos grid para un mejor control */
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
-    grid-gap: 20px; /* Espacio entre las tarjetas */
-    animation: breathe 2s infinite; /* Efecto de respiración */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    animation: breathe 2s infinite;
 }
+
 @keyframes breathe {
-    0%, 100% {
-        box-shadow: rgba(255, 255, 255, 0.15) 1.95px 1.95px 2.6px; /* Sombra inicial */
+
+    0%,
+    100% {
+        box-shadow: rgba(255, 255, 255, 0.15) 1.95px 1.95px 2.6px;
     }
+
     50% {
-        box-shadow: rgba(255, 255, 255, 0.5) 1px 1px 6px; /* Sombra más intensa */ /* Sombra más intensa */
+        box-shadow: rgba(255, 255, 255, 0.5) 1px 1px 6px;
     }
 }
 
 .card {
     background: rgba(70, 70, 70, 0.267);
-    backdrop-filter: blur(10px);
     border: rgba(156, 156, 156, 0.658) 1px solid;
     border-radius: 10px;
-    overflow: hidden; /* Para que la imagen no se salga */
-    transition: transform 0.3s ease; /* Transición suave para el hover */
-    display: flex; /* Usamos flexbox para las imágenes */
-    flex-direction: column; /* Las imágenes se apilan verticalmente */
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .card:hover {
-    transform: scale(1.05); /* Escala ligeramente al pasar el mouse */
+    transform: scale(1.05);
 }
 
 .card img {
     width: 100%;
-    height: auto; /* Altura automática para mantener la proporción */
-    max-height: 200px; /* Altura máxima para evitar imágenes demasiado grandes */
-    object-fit: cover; /* Para que la imagen cubra todo el espacio */
-    display: block; /* Evita espacios extra debajo de la imagen */
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    display: block;
 }
 
 .card-content {
@@ -552,47 +559,65 @@ body {
     font-weight: bold;
 }
 
+.bouncing-p {
+    animation: bounce 1.7s ease-in-out infinite;
+    display: inline-block;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(1px) scaleY(1);
+    }
+
+    40% {
+        transform: translateY(-3px) scaleY(1);
+    }
+}
+
 .modal {
-    display: none; /* Oculto por defecto */
-    position: fixed; /* Posición fija */
-    z-index: 1000; /* Por encima de otros elementos */
+    display: none;
+    position: fixed;
+    z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%; /* Ancho completo */
-    height: 100%; /* Alto completo */
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
-    justify-content: center; /* Centrado */
-    align-items: center; /* Centrado */
-    backdrop-filter: blur(5px); /* Efecto de desenfoque */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
 }
 
 .modal-content {
-    max-width: 90%; /* Máximo ancho */
-    max-height: 90%; /* Máxima altura */
+    max-width: 90%;
+    max-height: 90%;
 }
 
 .close {
-    position: absolute; /* Posición absoluta */
-    top: 20px; /* Espaciado desde arriba */
-    right: 30px; /* Espaciado desde la derecha */
-    color: white; /* Color del ícono */
-    font-size: 30px; /* Tamaño del ícono */
-    cursor: pointer; /* Cursor de puntero */
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
     z-index: 1001;
 }
 
-
-/* Media query para pantallas más pequeñas */
 @media (max-width: 768px) {
     #container-proyect h1 {
         font-size: 20px;
     }
+
     .content-proyect {
-        grid-template-columns: repeat(1, 1fr); /* 2 columnas en pantallas pequeñas */
+        grid-template-columns: repeat(1, 1fr);
     }
+
     .card img {
-        height: 180px; /* Altura de imagen más pequeña */
+        height: 180px;
     }
+
     .card-content {
         padding: 10px;
         color: #eee;
@@ -600,14 +625,12 @@ body {
 
     .card-content p {
         font-size: 14px;
-        
+
     }
 }
 
 
-
-
-
+/* MUESTRA LA CUARTA SECCION - FOOTER DE CONTACTO */
 #footer {
     position: relative;
     width: 100%;
@@ -619,46 +642,47 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-  }
-  
-  .social-icon {
+}
+
+.social-icon {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     margin: 10px 5px;
     flex-wrap: wrap;
-  }
-  
-  .icon-elem {
+}
+
+.icon-elem {
     list-style: none;
-  }
-  
-  .icon {
+}
+
+.icon {
     color: white;
     font-size: 32px;
     display: inline-block;
     margin: 0 10px;
     transition: 0.5s;
-  }
-  
-  .icon:hover {
+}
+
+.icon:hover {
     transform: translateY(-10px);
-  }
-  
-  .menu {
+}
+
+.menu {
     display: flex;
     justify-content: center;
     position: relative;
     align-items: center;
     margin: 10px 0;
     flex-wrap: wrap;
-  }
-  
-  .menu-elem {
+}
+
+.menu-elem {
     list-style: none;
-  }
-  .menu-icon {
+}
+
+.menu-icon {
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -667,17 +691,17 @@ body {
     margin: 5px 10px;
     opacity: 0.5;
     transition: 0.3s;
-  }
-  
-  .menu-icon:hover {
+}
+
+.menu-icon:hover {
     opacity: 1;
-  }
-  
-  .text {
+}
+
+.text {
     color: white;
     text-align: center;
     margin-top: 15px;
     margin-bottom: 10px;
     font-size: 16px;
     font-weight: bold;
-  }
+}
