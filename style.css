@@ -596,7 +596,6 @@ body {
     transition: transform 0.5s, width 0.5s, height 0.5s; /* Transiciones suaves */
 }
 
-
 .close {
     position: absolute;
     top: 20px;
@@ -618,7 +617,6 @@ body {
     cursor: pointer;
     display: none; 
 }
-
 
 
 @media (max-width: 768px) {
