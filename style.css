@@ -593,19 +593,36 @@ body {
 .modal-content {
     max-width: 90%;
     max-height: 90%;
+    transition: transform 0.5s, width 0.5s, height 0.5s; /* Transiciones suaves */
 }
+
 
 .close {
     position: absolute;
     top: 20px;
     right: 30px;
-    color: white;
+    color: #fff;
     font-size: 30px;
     cursor: pointer;
     z-index: 1001;
 }
 
+#rotateButton {
+    position: absolute; /* Asegura que se posicione correctamente */
+    color: #fff;
+    top: 70px; /* Ajusta este valor según sea necesario */
+    right: 30px; /* Alineado con el botón de cerrar */
+    font-size: 18px;
+    background: none; 
+    border: none; 
+    cursor: pointer;
+    display: none; 
+}
+
+
+
 @media (max-width: 768px) {
+
     #container-proyect h1 {
         font-size: 20px;
     }
@@ -625,7 +642,10 @@ body {
 
     .card-content p {
         font-size: 14px;
+    }
 
+    #rotateButton {
+        display: block; /* Muestra el botón en pantallas pequeñas */
     }
 }
 
