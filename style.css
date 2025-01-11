@@ -561,7 +561,7 @@ body {
     left: 0; /* Asegura que el overlay comienza desde la parte izquierda de la imagen */
     width: 100%; /* Asegura que el overlay cubre toda la imagen */
     height: 100%; /* Asegura que el overlay cubre toda la imagen */
-    background: rgba(0, 0, 0, 0.322); /* Fondo oscuro para la opacidad */
+    background: rgba(90, 90, 90, 0.5); /* Fondo oscuro para la opacidad */
     backdrop-filter: blur(3px); /* Aplica el efecto de desenfoque */
     color: white;
     font-size: 16px;
@@ -663,6 +663,29 @@ body {
     display: none; 
 }
 
+#prevButton, #nextButton {
+    position: absolute; /* Posiciona los botones de forma absoluta */
+    top: 50%; /* Centra verticalmente */
+    transform: translateY(-50%); /* Ajusta la posición vertical */
+    background: none;
+    color: #fff; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px; /* Espaciado interno */
+    cursor: pointer; /* Cursor de puntero */
+    font-size: 24px; /* Tamaño de la fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    z-index: 1005; /* Asegúrate de que esté por encima del contenido */
+}
+
+#prevButton {
+    left: 20px; /* Posición a la izquierda */
+}
+
+#nextButton {
+    right: 20px; /* Posición a la derecha */
+}
+
+
 
 @media (max-width: 768px) {
 
@@ -689,6 +712,27 @@ body {
 
     #rotateButton {
         display: block; /* Muestra el botón en pantallas pequeñas */
+    }
+
+    @keyframes colorChange {
+        0% {
+            color: #fff; /* Color inicial */
+            background-color: #cececebd;
+
+        }
+        50% {
+            color: #696969; /* Color intermedio */
+            background-color: #ffffffbd;
+        }
+        100% {
+            color: #fff; /* Color final */
+            background-color: #cececebd;
+        }
+    }
+    
+    #prevButton, #nextButton {
+        animation: colorChange 2s infinite; /* Cambia de color cada 2 segundos, de forma infinita */
+        transition: background-color 0.3s ease; 
     }
 }
 

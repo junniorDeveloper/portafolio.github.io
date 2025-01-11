@@ -110,8 +110,8 @@
             <div class="content-proyect">
                 <div class="card">
                     <div class="image-container">
-                        <img src="images/card1.gif">
-                        <div class="overlay" onclick="openModal(this.previousElementSibling)"> <i class="fas fa-images"></i><p>Ver más</p></div>
+                        <img src="images/card1.jpg" onclick="openModal(0)">
+                        <div class="overlay" onclick="openModal(0)"> <i class="fas fa-images"></i><p>Ver más</p></div>
                     </div>
                     <div class="card-content">
                         <p class="bouncing-p">Sistema de Ventas</p>
@@ -120,26 +120,27 @@
                 
                 <div class="card">
                     <div class="image-container">
-                        <img src="images/card2.gif" onclick="openModal(this)">
-                        <div class="overlay" onclick="openModal(this.previousElementSibling)"> <i class="fas fa-images"></i><p>Ver más</p></div>
+                        <img src="images/card2.jpg" onclick="openModal(1)">
+                        <div class="overlay" onclick="openModal(1)"> <i class="fas fa-images"></i><p>Ver más</p></div>
                     </div>
                     <div class="card-content">
                         <p class="bouncing-p">Gestión de Pedido</p>
                     </div>
                 </div>
+                
                 <div class="card">
                     <div class="image-container">
-                        <img src="images/card3.gif" onclick="openModal(this)">
-                        <div class="overlay" onclick="openModal(this.previousElementSibling)"> <i class="fas fa-images"></i> <p>Ver más</p></div>
+                        <img src="images/card3.jpg" onclick="openModal(2)">
+                        <div class="overlay" onclick="openModal(2)"> <i class="fas fa-images"></i> <p>Ver más</p></div>
                     </div>
                     <div class="card-content">
-                        <p class="bouncing-p">Sistema de Benefiarios</p>
+                        <p class="bouncing-p">Sistema de Beneficiarios</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="image-container">
-                        <img src="images/card4.gif" onclick="openModal(this)">
-                        <div class="overlay" onclick="openModal(this.previousElementSibling)"> <i class="fas fa-images"></i><p>Ver más</p></div>
+                        <img src="images/card4.jpg" onclick="openModal(3)">
+                        <div class="overlay" onclick="openModal(3)"> <i class="fas fa-images"></i><p>Ver más</p></div>
                     </div>
                     <div class="card-content">
                         <p class="bouncing-p">Control Financiero</p>
@@ -147,8 +148,8 @@
                 </div>
                 <div class="card">
                     <div class="image-container">
-                        <img src="images/card5.gif" onclick="openModal(this)">
-                        <div class="overlay" onclick="openModal(this.previousElementSibling)"> <i class="fas fa-images"></i><p>Ver más</p></div>
+                        <img src="images/card5.jpg" onclick="openModal(4)">
+                        <div class="overlay" onclick="openModal(4)"> <i class="fas fa-images"></i><p>Ver más</p></div>
                     </div>
                     <div class="card-content">
                         <p class="bouncing-p">Portafolio Web</p>
@@ -157,8 +158,8 @@
 
                 <div class="card">
                     <div class="image-container">
-                        <img src="images/card6.gif" onclick="openModal(this)">
-                        <div class="overlay" onclick="openModal(this.previousElementSibling)"> <i class="fas fa-images"></i><p>Ver más</p></div>
+                        <img src="images/card6.jpg" onclick="openModal(5)">
+                        <div class="overlay" onclick="openModal(5)"> <i class="fas fa-images"></i><p>Ver más</p></div>
                     </div>
                     <div class="card-content">
                         <p class="bouncing-p">Reporte Estadístico</p>
@@ -169,10 +170,12 @@
 
             <div id="imageModal" class="modal" onclick="closeModal()">
                 <span class="close" onclick="closeModal()">&times;</span>
-                    <img class="modal-content" id="modalImage">
-                    <button id="rotateButton" onclick="rotateImage(event)" style="background: none; border: none; cursor: pointer;">
-                        <i class="fas fa-sync-alt" ></i> <!-- Ícono de rotación -->
-                    </button>
+                <img class="modal-content" id="modalImage">
+                <button id="rotateButton" onclick="rotateImage(event)" style="background: none; border: none; cursor: pointer;">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+                <button id="prevButton" onclick="changeImage(-1, event)">&#10094;</button>
+                <button id="nextButton" onclick="changeImage(1, event)">&#10095;</button>
             </div>
             
         </div>
@@ -273,18 +276,45 @@
         cicloTexto();
     </script>
 
-    <!-- TERCERA SECCION SECCION - MODAL PARA LAS IMAGENES DE EXPERIENCIA -->
-    <script>
+     <script>
+        let currentImageIndex = 0; // Índice de la imagen actual
+        let currentCardIndex = 0; // Índice de la tarjeta actual
 
-        let hasRotated = false; // Variable para controlar la rotación
+        const images = [
+            ["images/card1.jpg", "images/card1_1.jpg", "images/card1_2.jpg"], // Imágenes para la tarjeta 1
+            ["images/card2.jpg", "images/card2_1.jpg", "images/card2_2.jpg"], // Imágenes para la tarjeta 2
+            ["images/card3.jpg", "images/card3_1.jpg", "images/card3_2.jpg"], // Imágenes para la tarjeta 3
+            ["images/card4.jpg", "images/card4_1.jpg", "images/card4_2.jpg"], // Imágenes para la tarjeta 4
+            ["images/card5.jpg", "images/card5_1.jpg", "images/card5_2.jpg"], // Imágenes para la tarjeta 5
+            ["images/card6.jpg", "images/card6_1.jpg"]  // Imágenes para la tarjeta 6
+        ];
 
-        function openModal(img) {
+        function openModal(cardIndex) {
             const modal = document.getElementById("imageModal");
             const modalImg = document.getElementById("modalImage");
+            currentCardIndex = cardIndex;
+            currentImageIndex = 0; // Reinicia el índice de la imagen actual
             modal.style.display = "flex";
-            modalImg.src = img.src;
+            modalImg.src = images[currentCardIndex][currentImageIndex]; // Muestra la primera imagen
             resetRotation(); // Reinicia la rotación al abrir el modal
         }
+
+        function changeImage(direction, event) {
+            event.stopPropagation(); // Evita que el clic cierre el modal
+            const modalImg = document.getElementById("modalImage");
+
+            currentImageIndex += direction;
+
+            // Asegúrate de que el índice esté dentro del rango
+            if (currentImageIndex < 0) {
+                currentImageIndex = images[currentCardIndex].length - 1; // Última imagen
+            } else if (currentImageIndex >= images[currentCardIndex].length) {
+                currentImageIndex = 0; // Primera imagen
+            }
+
+            modalImg.src = images[currentCardIndex][currentImageIndex]; // Cambia la imagen
+        }
+
 
         function closeModal() {
             const modal = document.getElementById("imageModal");
@@ -297,8 +327,8 @@
             const modalImg = document.getElementById("modalImage");
             modalImg.style.transition = "transform 0.5s, width 0.5s, height 0.5s";
 
-            if (!hasRotated) { // Si no ha rotado antes
-                modalImg.style.transform = "rotate(90deg) scale(1.5)";
+            if (!hasRotated && window.innerWidth <= 600) { // Si no ha rotado antes y el ancho es adecuado
+                modalImg.style.transform = "rotate(90deg) scale(1.4)";
             } else {
                 modalImg.style.transform = "rotate(0deg) scale(1)";
             }
@@ -311,7 +341,7 @@
             modalImg.style.transform = "rotate(0deg)"; // Restablece la rotación a 0
             hasRotated = false; // Resetea la variable de control
         }
-    </script>
+     </script>
 
 
 </body>
