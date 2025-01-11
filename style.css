@@ -571,6 +571,11 @@ body {
     align-items: center; /* Centrar verticalmente */
     transition: opacity 0.8s ease;
     cursor: pointer;
+    pointer-events: none; 
+}
+
+.overlay:focus {
+    outline: none; /* Asegura que no haya outline en el foco */
 }
 
 .overlay i{
@@ -651,17 +656,6 @@ body {
     z-index: 1001;
 }
 
-#rotateButton {
-    position: absolute; /* Asegura que se posicione correctamente */
-    color: #fff;
-    top: 70px; /* Ajusta este valor según sea necesario */
-    right: 30px; /* Alineado con el botón de cerrar */
-    font-size: 18px;
-    background: none; 
-    border: none; 
-    cursor: pointer;
-    display: none; 
-}
 
 #prevButton, #nextButton {
     position: absolute; /* Posiciona los botones de forma absoluta */
@@ -709,31 +703,42 @@ body {
     .card-content p {
         font-size: 14px;
     }
-
-    #rotateButton {
-        display: block; /* Muestra el botón en pantallas pequeñas */
+    .modal-content {
+        max-width: 80%;
+        max-height: 90%;
     }
 
-    @keyframes colorChange {
-        0% {
-            color: #fff; /* Color inicial */
-            background-color: #cececebd;
 
-        }
-        50% {
-            color: #696969; /* Color intermedio */
-            background-color: #ffffffbd;
-        }
-        100% {
-            color: #fff; /* Color final */
-            background-color: #cececebd;
-        }
+}
+
+@media (max-width: 600px) {
+
+    .modal-content {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    #prevButton, #nextButton {
+        background-color: #2222228f;
+        border-radius: 50%;
+        box-shadow: rgba(255, 255, 255, 0.301) 1.95px 1.95px 2.6px;
+        padding: 0px;
+        width: 40px; /* Ajusta el ancho según sea necesario */
+        height: 40px; /* Ajusta la altura según sea necesario */
+        display: flex; /* Para centrar el contenido */
+        align-items: center; /* Centra verticalmente el contenido */
+        justify-content: center; /* Centra horizontalmente el contenido */
+        top: 80%;
+    }
+
+    #prevButton {
+        left: 30%;
     }
     
-    #prevButton, #nextButton {
-        animation: colorChange 2s infinite; /* Cambia de color cada 2 segundos, de forma infinita */
-        transition: background-color 0.3s ease; 
+    #nextButton {
+        right: 30%;
     }
+
 }
 
 

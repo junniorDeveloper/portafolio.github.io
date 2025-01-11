@@ -171,9 +171,6 @@
             <div id="imageModal" class="modal" onclick="closeModal()">
                 <span class="close" onclick="closeModal()">&times;</span>
                 <img class="modal-content" id="modalImage">
-                <button id="rotateButton" onclick="rotateImage(event)" style="background: none; border: none; cursor: pointer;">
-                    <i class="fas fa-sync-alt"></i>
-                </button>
                 <button id="prevButton" onclick="changeImage(-1, event)">&#10094;</button>
                 <button id="nextButton" onclick="changeImage(1, event)">&#10095;</button>
             </div>
@@ -296,7 +293,6 @@
             currentImageIndex = 0; // Reinicia el índice de la imagen actual
             modal.style.display = "flex";
             modalImg.src = images[currentCardIndex][currentImageIndex]; // Muestra la primera imagen
-            resetRotation(); // Reinicia la rotación al abrir el modal
         }
 
         function changeImage(direction, event) {
@@ -319,29 +315,11 @@
         function closeModal() {
             const modal = document.getElementById("imageModal");
             modal.style.display = "none";
-            resetRotation(); // Reinicia la rotación al cerrar el modal
         }
 
-        function rotateImage() {
-            event.stopPropagation(); // Evita que el clic en el botón cierre el modal
-            const modalImg = document.getElementById("modalImage");
-            modalImg.style.transition = "transform 0.5s, width 0.5s, height 0.5s";
-
-            if (!hasRotated && window.innerWidth <= 600) { // Si no ha rotado antes y el ancho es adecuado
-                modalImg.style.transform = "rotate(90deg) scale(1.4)";
-            } else {
-                modalImg.style.transform = "rotate(0deg) scale(1)";
-            }
-            
-            hasRotated = !hasRotated; // Cambia el estado de rotación
-        }
-
-        function resetRotation() {
-            const modalImg = document.getElementById("modalImage");
-            modalImg.style.transform = "rotate(0deg)"; // Restablece la rotación a 0
-            hasRotated = false; // Resetea la variable de control
-        }
      </script>
+
+     
 
 
 </body>
