@@ -669,7 +669,6 @@ body {
     font-size: 24px; /* Tamaño de la fuente */
     border-radius: 5px; /* Bordes redondeados */
     z-index: 1005; /* Asegúrate de que esté por encima del contenido */
-    pointer-events: none;
 }
 
 #prevButton {
