@@ -383,7 +383,7 @@ body {
     align-items: center;
     justify-content: center;
     height: auto;
-    padding: 3% 0;
+    padding: 2% 0;
     scroll-margin-top: 60px;
 }
 
@@ -399,6 +399,7 @@ body {
     flex-wrap: wrap;
     box-shadow: rgba(255, 255, 255, 0.331) 0px 1px 4px;
     animation: new 2s infinite;
+    margin-bottom: 30px;
 }
 
 @keyframes new {
